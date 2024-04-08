@@ -5,8 +5,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentReporterNG {
 	
-	ExtentReports extent;
-	public void getRepoObject()
+	static ExtentReports extent;
+	public static ExtentReports getRepoObject()
 	{
 		String path= System.getProperty("user.dir")+"// reports//index.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
@@ -16,6 +16,7 @@ public class ExtentReporterNG {
 		 extent=new ExtentReports();
 		extent.attachReporter(reporter);
 		extent.setSystemInfo("Tester", "Kd learning");
+		return extent;
 	}
 
 }

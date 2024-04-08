@@ -1,0 +1,22 @@
+package Kd_Learning.TestComponents;
+
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentReports;
+
+import kd_Learning.resources.ExtentReporterNG;
+
+public class Listeners implements ITestListener{
+	
+	
+	ExtentReports extent = ExtentReporterNG.getRepoObject();
+	
+	public void onTestStart(ITestResult result)
+	{
+		// here we are using the inbuilt methods to get the method name
+		extent.createTest(result.getMethod().getMethodName());
+	}
+	
+
+}
