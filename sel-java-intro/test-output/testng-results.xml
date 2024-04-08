@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-21T17:25:26 PDT" name="Default suite" finished-at="2024-03-21T17:25:26 PDT" duration-ms="28">
+    <groups>
+    </groups>
+    <test started-at="2024-03-21T17:25:26 PDT" name="Default test" finished-at="2024-03-21T17:25:26 PDT" duration-ms="28">
+      <class name="Streams">
+        <test-method signature="StreamCollect()[pri:0, instance:Streams@35047d03]" started-at="2024-03-21T17:25:26 PDT" name="StreamCollect" finished-at="2024-03-21T17:25:26 PDT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StreamCollect -->
+        <test-method signature="myMethod()[pri:0, instance:Streams@35047d03]" started-at="2024-03-21T17:25:26 PDT" name="myMethod" finished-at="2024-03-21T17:25:26 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myMethod -->
+        <test-method signature="steramFilter()[pri:0, instance:Streams@35047d03]" started-at="2024-03-21T17:25:26 PDT" name="steramFilter" finished-at="2024-03-21T17:25:26 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- steramFilter -->
+        <test-method signature="streamMap()[pri:0, instance:Streams@35047d03]" started-at="2024-03-21T17:25:26 PDT" name="streamMap" finished-at="2024-03-21T17:25:26 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- streamMap -->
+      </class> <!-- Streams -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

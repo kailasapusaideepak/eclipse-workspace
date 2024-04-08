@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.jdt.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link1</name>
+			<type>2</type>
+			<location>/Users/saideepakkailasapu/.eclipse/org.eclipse.platform_4.30.0_1231987628_macosx_cocoa_aarch64/configuration/org.eclipse.osgi/520/0/.cp</location>
+		</link>
+	</linkedResources>
+</projectDescription>
