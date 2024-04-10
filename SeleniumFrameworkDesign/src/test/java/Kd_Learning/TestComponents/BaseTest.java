@@ -1,10 +1,14 @@
 package Kd_Learning.TestComponents;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -39,6 +43,16 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return driver;
 	}
+	
+	
+	public String getScreenShot(String testCaseName, WebDriver driver) throws IOException
+	{
+		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		File dest=new File(System.getProperty("user.dir")+"// reports//"+ testCaseName+ ".png");
+		FileUtils.copyFile(src, dest);
+		return System.getProperty("user.dir")+"// reports//"+ testCaseName+ ".png";
+	}
+	
 	
 	@BeforeTest(alwaysRun=true)
 	public LoginPage launchApplication() throws IOException

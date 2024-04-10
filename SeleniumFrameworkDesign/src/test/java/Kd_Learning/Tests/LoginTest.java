@@ -82,13 +82,7 @@ public class LoginTest extends BaseTest {
 
 	}
 	
-	public File getScreenShot(String testCaseName) throws IOException
-	{
-		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File dest=new File(System.getProperty("user.dir")+"// reports//"+ testCaseName+ ".png");
-		FileUtils.copyFile(src, dest);
-		return dest;
-	}
+	
 	
 	@DataProvider
 	 public Object[][] getData() throws IOException

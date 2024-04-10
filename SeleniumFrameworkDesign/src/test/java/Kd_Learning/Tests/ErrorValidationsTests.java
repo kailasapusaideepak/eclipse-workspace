@@ -1,6 +1,7 @@
 package Kd_Learning.Tests;
 
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.time.Duration;
@@ -32,7 +33,7 @@ public class ErrorValidationsTests extends BaseTest {
 		String productName = "ZARA COAT 3";
 
 		loginpage.LoginAction("kd1@gmail.com", "Qwerty@143");
-		AssertJUnit.assertEquals("Incorrect email or password.", loginpage.ErrorMessage());
+		Assert.assertEquals("Incorrect email or password", loginpage.ErrorMessage());
 
 	}
 
