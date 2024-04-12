@@ -1,0 +1,38 @@
+package kd_Learning.AbstractComponents;
+
+public class ComparingStrings {
+
+	 
+    public static void main(String[] args) {
+        String str1 = "sai";
+        String str2 = "deepak";
+        
+        System.out.println("Character counts for string \"" + str1 + "\":");
+        printCharacterCounts(str1);
+        int count;
+        
+       
+    }
+    
+    // Function to count characters in a string using nested loops
+    public static void printCharacterCounts(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+             count = 0;
+            
+            // Count occurrences of current character
+            for (int j = 0; j < str.length(); j++) {
+                if (str.charAt(j) == ch) {
+                    count++;
+                }
+                
+            }
+            
+            System.out.println("'" + ch + "': " + count + " times");
+            
+           
+            
+        }
+    }
+
+}

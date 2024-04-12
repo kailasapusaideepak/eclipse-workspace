@@ -1,0 +1,69 @@
+package kd_Learning.AbstractComponents;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import com.google.common.base.Function;
+
+public class ComparingStrings {
+
+	 
+    public static void main(String[] args) {
+        String str1 = "sai";
+        String str2 = "deepak";
+        
+        System.out.println("Character counts for string \"" + str1 + "\":");
+        printCharacterCounts(str1,str2);
+        System.out.println("Character counts for string \"" + str2 + "\":");
+
+        printCharacterCounts1(str1,str2);
+        
+        
+       
+    }
+    
+    // Function to count characters in a string using nested loops
+    public static void printCharacterCounts(String str1, String str2) {
+    	int count;
+        for (int i = 0; i < str1.length(); i++) {
+            char ch = str1.charAt(i);
+             count = 0;
+            
+            // Count occurrences of current character
+            for (int j = 0; j < str2.length(); j++) {
+                if (str2.charAt(j) == ch) {
+                    count++;
+                }
+                
+            }
+            
+            System.out.println("'" + ch + "': " + count + " times");
+            
+           
+            
+        }
+    }
+    
+    public static void printCharacterCounts1(String str1, String str2) {
+        StringBuilder sb1 = new StringBuilder(str1);
+        StringBuilder sb2 = new StringBuilder(str2);
+        
+        Map<Character, Integer> charCount = new HashMap<>();
+        
+       
+        
+        // Iterate through the combined StringBuilder
+        for (int i = 0; i < sb1.length(); i++) {
+            char ch = sb1.charAt(i);
+            
+            // Increment count for the current character
+            charCount.put(ch, charCount.getOrDefault(ch, 0) + 1);
+        }
+        
+        // Print character counts
+        charCount.forEach((ch, count) -> System.out.println("'" + ch + "': " + count + " times"));
+    }
+    
+
+}
